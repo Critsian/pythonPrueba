@@ -1,0 +1,47 @@
+
+usuarioRegistrado = "patata"
+claveRegistrada = "4321"
+cuentaAhorros = 5000 
+
+def retirar ():
+    montoRetiro = int(input("Monto a retirar: "))
+    if montoRetiro <= cuentaAhorros:
+        print("Saldo en la cuenta: ",cuentaAhorros-montoRetiro)
+    else:
+        print("El monto solocitado excede lo que tiene en su cuenta.")
+    
+def consignar ():
+    montoConsiganr = int(input("Monto a consignar: "))
+    print("Saldo en la cuenta: ",cuentaAhorros+montoConsiganr)
+ 
+
+print("******************************************")
+print("Bienvenido a banco EL MICHI")
+print("Por favor Ingrese sos datos")
+
+print("------------------------")
+ususario = input("Usuario: ")
+clave = input("clave: ")
+print("------------------------")
+
+if ususario == usuarioRegistrado:
+    if clave == claveRegistrada:
+        print("usuario es: "+usuarioRegistrado)
+        print("la clave es: "+claveRegistrada)
+        print("------------------------")
+        
+        print("Hola señor ",usuarioRegistrado," en que podemos ayudarle hoy?")
+        print("\nConsignación = 1  ","  Retiro = 2")
+        opcion = input()
+        
+        if opcion == "1":
+            print("opcion 1 Consignar")
+            consignar ()
+            
+        elif opcion == "2":
+            print("opcion 2 retirar")
+            retirar ()
+    else:
+        print("La contraseña es incorrecta.")
+else:
+    print("El usuario es incorrecto.")
