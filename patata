@@ -1,0 +1,40 @@
+from ast import If, While
+from re import A
+
+print("**************************************")
+i = 1
+while i <= 3:
+    print("\nHola, soy BOT")
+    print("Te pedire algunos datos, ok? tiene dos intentos.\n")
+    print("Nombre: ")
+    nombre = input()
+    print("Cedula: ")
+    cedula = input()
+    print("Edad: ")
+    edad = input() 
+    print("Telefono: ")
+    telefono = input()
+    print("Tiene sueño? ")
+    sueno = input() 
+    print("Tiene hambre? ")
+    hambre = input() 
+    
+    print("----------------------")
+    print("\nBuen dia, joven",nombre,"\n\nConfirmemos que tus datos esten bien.\n\nCedula: "
+        ,cedula,"\nEdad: ",edad,"\nTelefono: ",telefono,"\nUste dijo que ",sueno,"tiene sueño.\nUste dijo que ",hambre,"tiene hambre.",)
+    print("----------------------")
+    print("\nLa informacion es correcta? 1 = si, 2 = no")
+    respuesta = int( input())
+    print("----------------------")
+    if respuesta == 1:
+        print("\nGracias")
+        break
+    if i == 2:
+        print("\nPerdona, se terminaron los intentos...\nGracias por participar.")
+        break 
+    if respuesta == 2:
+        print("\nComencemos otra ves...")
+    i+=1
+    
+#print(f"\nBUEN DIA, JOVEN {nombre} \n\nCONFIRMEMOS TUS DATOS.\n\nCEDULA: {cedula}\nEDAD: {edad}\nTELEFONO: {telefono}\nUSTED {sueno} TIENE SUEÑO \nUSTED {hambre} TIENE HAMBRE")
+print("**************************************")
